@@ -1,0 +1,46 @@
+machine:
+    environment:
+        ANDROID_HOME: /usr/local/android-sdk-linux
+
+general:
+  artifacts:
+    - "screenshots" 
+
+dependencies:
+  pre:
+    - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-21.1.2,android-21,extra-google-m2repository,extra-google-google_play_services,extra-android-support
+    - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+  override:
+    #- sudo npm cache clean
+    #- sudo npm install -g appium@1.5.3
+    - appium --address 127.0.0.1 --port 4725 &:
+        background: true
+    #- npm install    
+
+test:
+  pre:
+    # create android v23 emulator as latest supported android version with sdcard
+    - echo no | android create avd -n circleci-android21 -t $(android list targets | grep android-21 | cut -d" " -f2) -c 512M
+
+    # emulator startup need some minutes that's why start it before first build/test steps to speed up build
+    - emulator -avd circleci-android21 -no-audio -no-window:
+        background: true
+        parallel: true
+
+    - ./gradlew init
+    - ./gradlew dependencies
+    - ./gradlew assemble
+    - ./gradlew check
+    - ./gradlew connectedAndroidTest
+
+    # wait for it to have booted
+    - circle-android wait-for-boot
+    - sleep 5
+    #unlock the device
+    - adb shell input keyevent 82
+    - sleep 5
+    - adb shell input touchscreen swipe 370 735 371 735
+    - sleep 5
+
+    #run tests against emulator
+    - npm run test:e2e

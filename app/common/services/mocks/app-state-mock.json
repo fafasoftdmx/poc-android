@@ -1,0 +1,158 @@
+{
+    "guid": 98765,
+    "firstName": "Bilbo",
+    "lastName": "Baggins",
+    "vehicles": [
+        {
+            "status": "complete",
+            "ymm": "2013 Ford Taurus",
+            "vin": "WBAWV53568P078170",
+            "odometer": 18766,
+            "colorInterior": {
+                "id": "200112899",
+                "name": "Cream Beige",
+                "equipmentType": "COLOR",
+                "availability": "USED",
+                "manufactureOptionName": "Cream Beige",
+                "manufactureOptionCode": "LCGE",
+                "category": "Interior",
+                "attributes": [],
+                "colorChips": {
+                    "primary": {
+                        "r": 195,
+                        "g": 179,
+                        "b": 146,
+                        "hex": "C3B392"
+                    }
+                },
+                "fabricTypes": [
+                    {
+                        "name": "FABRIC_TYPE_1",
+                        "value": "premium leather"
+                    }
+                ]
+            },
+            "colorExterior": {
+                "id": "200112897",
+                "name": "Coral Red/Black",
+                "equipmentType": "COLOR",
+                "availability": "USED",
+                "manufactureOptionName": "Coral Red/Black",
+                "manufactureOptionCode": "LCD1",
+                "category": "Interior",
+                "attributes": [],
+                "colorChips": {
+                    "primary": {
+                        "r": 136,
+                        "g": 42,
+                        "b": 34,
+                        "hex": "882A22"
+                    },
+                    "secondary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                },
+                "fabricTypes": [
+                    {
+                        "name": "FABRIC_TYPE_1",
+                        "value": "premium leather"
+                    }
+                ]
+            },
+            "photos": [
+                {
+                    "type": "photoExteriorSide"
+                }
+            ],
+            "qualityAttributes": [
+                {
+                    "type": "interiorPaintQuality",
+                    "value": "good"
+                }
+            ],
+            "voiceNotes": {
+                "vnid": 12234566,
+                "path": "http://testvoicepath22444555.com"
+            }
+        },
+        {
+            "status": "incomplete",
+            "ymm": "2012 Maserati Ghibli",
+            "vin": "WBAWV53568P078199",
+            "odometer": 18766,
+            "colorInterior": {
+                "id": "200112899",
+                "name": "Cream Beige",
+                "equipmentType": "COLOR",
+                "availability": "USED",
+                "manufactureOptionName": "Cream Beige",
+                "manufactureOptionCode": "LCGE",
+                "category": "Interior",
+                "attributes": [],
+                "colorChips": {
+                    "primary": {
+                        "r": 195,
+                        "g": 179,
+                        "b": 146,
+                        "hex": "C3B392"
+                    }
+                },
+                "fabricTypes": [
+                    {
+                        "name": "FABRIC_TYPE_1",
+                        "value": "premium leather"
+                    }
+                ]
+            },
+            "colorExterior": {
+                "id": "200112897",
+                "name": "Coral Red/Black",
+                "equipmentType": "COLOR",
+                "availability": "USED",
+                "manufactureOptionName": "Coral Red/Black",
+                "manufactureOptionCode": "LCD1",
+                "category": "Interior",
+                "attributes": [],
+                "colorChips": {
+                    "primary": {
+                        "r": 136,
+                        "g": 42,
+                        "b": 34,
+                        "hex": "882A22"
+                    },
+                    "secondary": {
+                        "r": 0,
+                        "g": 0,
+                        "b": 0,
+                        "hex": "000000"
+                    }
+                },
+                "fabricTypes": [
+                    {
+                        "name": "FABRIC_TYPE_1",
+                        "value": "premium leather"
+                    }
+                ]
+            },
+            "photos": [
+                {
+                    "type": "photoExteriorSide"
+                }
+            ],
+            "qualityAttributes": [
+                {
+                    "type": "interiorPaintQuality",
+                    "value": "good"
+                }
+            ],
+            "voiceNotes": {
+                "vnid": 12234566,
+                "path": "http://testvoicepath22444555.com"
+            }
+        }
+    ]
+
+}

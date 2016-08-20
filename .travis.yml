@@ -1,0 +1,15 @@
+# Hepburn
+language: objective-c
+osx_image: xcode7.3
+xcode_sdk: iphonesimulator9.3
+
+before_script:
+  - cd dmx
+  - npm install
+  - react-native run-ios 
+  - npm install -g appium@1.5.3
+  - npm run appium-run >> ~/.bashrc
+  - sleep 30
+
+script:
+  - npm run test:e2e

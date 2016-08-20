@@ -1,0 +1,23 @@
+machine:
+  xcode:
+    version: "7.3"
+  environment:
+    XCODE_SCHEME: "dmx"
+    XCODE_PROJECT: "ios/dmx.xcodeproj"
+general:
+  artifacts:
+    - "screenshots"    
+dependencies:
+  override:
+    - sudo npm cache clean
+    - sudo npm install -g appium@1.5.3
+    - appium --address 127.0.0.1 --port 4725 &:
+        background: true
+    - npm install
+    - react-native run-ios
+    - sleep 60        
+    #- xcodebuild -arch i386 clean build -workspace ios/dmx.xcworkspace -scheme dmx -sdk iphonesimulator9.3 -derivedDataPath ios/build
+
+test:
+  override:
+    - npm run test:e2e
