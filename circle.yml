@@ -27,14 +27,16 @@ test:
         background: true
         parallel: true
 
-    - ./android/gradlew init
-    - ./android/gradlew dependencies
-    - ./android/gradlew assemble
-    - ./android/gradlew check
-    - ./android/gradlew connectedAndroidTest
+    #- ./android/gradlew init
+    #- ./android/gradlew dependencies
+    #- ./android/gradlew assemble
+    #- ./android/gradlew check
+    #- ./android/gradlew connectedAndroidTest
+
+    - react-native run-android
 
     # wait for it to have booted
-    - circle-android wait-for-boot
+    #- circle-android wait-for-boot
     - sleep 5
     #unlock the device
     - adb shell input keyevent 82
