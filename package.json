@@ -43,7 +43,7 @@
     "preinstall": "npm install -g react-native-cli && npm install rnpm --global",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint .",
-    "test:e2e": "ENV=localhost TARGET=android:5.0 npm test test/AppraiseTests.js",
+    "test:e2e": "ENV=localhost TARGET=android:6.0 npm test test/AppraiseTests.js",
     "test": "npm run mocha-test",
     "mocha-test": "node_modules/mocha/bin/mocha --timeout 0",
     "appium-install": "npm install -g appium@1.5.3",

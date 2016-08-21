@@ -91,6 +91,7 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
+    /*
     signingConfigs {
         release {
             storeFile file(DMX_APPRAISEIT_RELEASE_STORE_FILE)
@@ -99,6 +100,7 @@ android {
             keyPassword DMX_APPRAISEIT_RELEASE_KEY_PASSWORD
         }
     }
+    */
     splits {
         abi {
             reset()

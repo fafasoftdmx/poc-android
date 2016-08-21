@@ -99,14 +99,14 @@ module.exports = {
     }, 
   },
   android: {
-    '5.0': {
-      name: 'DMX iAppraise Mobile - android 5.0',
+    '6.0': {
+      name: 'DMX iAppraise Mobile - android 6.0',
       browserName: '',
       platform: '',
       appiumVersion: '1.5.3',
       platformName: 'Android',
       //platformVersion: '4.3',
-      platformVersion:'5.0',
+      platformVersion:'6.0',
       //deviceName: 'HSKC36ALGPXA1D1',
       deviceName:'Android Emulator',        
       appActivity: '.MainActivity',
