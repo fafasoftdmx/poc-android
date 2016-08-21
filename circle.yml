@@ -15,7 +15,7 @@ dependencies:
     #- sudo npm install -g appium@1.5.3
     - appium --address 127.0.0.1 --port 4725 &:
         background: true
-    #- npm install    
+    - npm install    
 
 test:
   pre:
