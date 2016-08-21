@@ -9,7 +9,7 @@ general:
 dependencies:
   pre:
     - echo y | android update sdk --no-ui --all --filter tools,platform-tools,build-tools-21.1.2,android-21,extra-google-m2repository,extra-google-google_play_services,extra-android-support
-    - ANDROID_HOME=/usr/local/android-sdk-linux ./android/gradlew dependencies
+    #- ANDROID_HOME=/usr/local/android-sdk-linux ./android/gradlew dependencies
   override:
     #- sudo npm cache clean
     #- sudo npm install -g appium@1.5.3
@@ -27,11 +27,11 @@ test:
         background: true
         parallel: true
 
-    - ./gradlew init
-    - ./gradlew dependencies
-    - ./gradlew assemble
-    - ./gradlew check
-    - ./gradlew connectedAndroidTest
+    - ./android/gradlew init
+    - ./android/gradlew dependencies
+    - ./android/gradlew assemble
+    - ./android/gradlew check
+    - ./android/gradlew connectedAndroidTest
 
     # wait for it to have booted
     - circle-android wait-for-boot

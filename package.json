@@ -46,7 +46,6 @@
     "test:e2e": "ENV=localhost TARGET=android:5.0 npm test test/AppraiseTests.js",
     "test": "npm run mocha-test",
     "mocha-test": "node_modules/mocha/bin/mocha --timeout 0",
-    "mocha-test": "node_modules/mocha/bin/mocha --timeout 0",
     "appium-install": "npm install -g appium@1.5.3",
     "appium-run": "appium --address 127.0.0.1 --port 4725 &"
   },
