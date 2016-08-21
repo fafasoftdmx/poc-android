@@ -12,8 +12,8 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter build-tools-23.0.1
     #- ANDROID_HOME=/usr/local/android-sdk-linux ./android/gradlew dependencies
   override:
-    - sudo npm cache clean
-    - sudo npm install -g appium@1.5.3
+    - npm cache clean
+    - npm install -g appium@1.5.3
     - appium --address 127.0.0.1 --port 4725 &:
         background: true
     - npm install    
