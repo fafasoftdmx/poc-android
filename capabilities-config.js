@@ -110,10 +110,10 @@ module.exports = {
       //deviceName: 'HSKC36ALGPXA1D1',
       deviceName:'Android Emulator',        
       appActivity: '.MainActivity',
-      appPackage: 'com.dmx',          
+      appPackage: 'com.dmx'          
       //app: apps.androidDmxApp
-      webStorageEnabled: true,
-      app: 'sauce-storage:app-release.apk'
+      //webStorageEnabled: true
+      //app: 'sauce-storage:app-release.apk'
     }, 
   },
 };
